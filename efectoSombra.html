@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Sombra</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;  
+        }
+        body {
+            background: radial-gradient(#959e9e, #505355,black);
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+        #sol{
+            height: 100px;
+            width: 100px;
+            margin-left: 50%;
+            margin-top: 280px;
+            border-radius: 50%;
+            background: radial-gradient(rgb(255, 255, 155), rgb(252, 252, 113), rgb(248, 248, 76), yellow);
+            box-shadow: 0 0 180px 120px yellow;
+        }
+        #planeta{
+            height: 100px;
+            width: 100px;
+            display: flex;
+            position: relative;
+            border: 1px solid;
+            border-radius: 50%;
+            background: linear-gradient(90deg,#003743, #006579, #00a1c1, #00cffd);
+            box-shadow: -10px 10px 5px 5px black;
+            justify-content: left;
+            animation-name: sombra;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes sombra {
+            0%{
+                box-shadow: -10px 0px 5px 3px black;
+                background: linear-gradient(90deg,#000000, #006579, #00a1c1, #00cffd, #58defd,#b4eefc);
+                left: 450px;
+                top: -100px;
+            }
+            5%{
+                box-shadow: -8px 2px 5px 3px black;
+                background: linear-gradient(70deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 500px;
+                top: -50px;
+            }
+            10%{
+                box-shadow: -6px 4px 5px 3px black;
+                background: linear-gradient(50deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 550px;
+                top: 0;
+            }
+            15%{
+                box-shadow: -4px 6px 5px 3px black;
+                background: linear-gradient(30deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 600px;
+                top: 50px;
+            }
+            20%{
+                box-shadow: -2px 8px 5px 3px black;
+                background: linear-gradient(10deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 650px;
+                top: 100px;
+            }
+            25%{
+                box-shadow: 0 10px 5px 3px black;
+                background: linear-gradient(360deg,#000000,#006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 700px;
+                top: 150px;
+            }
+            30%{
+                box-shadow: 2px 8px 5px 3px black;
+                background: linear-gradient(340deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                right: 750px;
+                top: 100px;
+            }
+            35%{
+                box-shadow: 4px 6px 5px 3px black;
+                background: linear-gradient(320deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                right: 800px;
+                top: 50px;
+            }
+            40%{
+                box-shadow: 6px 4px 5px 3px black;
+                background: linear-gradient(300deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 850px;
+                top: 0;
+            }
+            45%{
+                box-shadow: 8px 2px 5px 3px black;
+                background: linear-gradient(290deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 900px;
+                top: -50px;
+            }
+            50%{
+                box-shadow: 10px 0 5px 3px black;
+                background: linear-gradient(270deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 950px;
+                top: -100px;
+            }
+                       
+            55%{
+                box-shadow: 8px -2px 5px 3px black; 
+                background: linear-gradient(250deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 900px;
+                top: -150px;
+            }
+            60%{
+                box-shadow: 6px -4px 5px 3px black;
+                background: linear-gradient(230deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 850px;
+                top: -200px;
+            }
+            65%{
+                box-shadow: 4px -6px 5px 3px black;
+                background: linear-gradient(210deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 800px;
+                top: -250px;
+            }
+            70%{
+                box-shadow: 2px -8px 5px 3px black;
+                background: linear-gradient(200deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                right: 750px;
+                top: -300px;
+            }
+            75%{
+                box-shadow: 0 -10px 5px 3px black;
+                background: linear-gradient(180deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                right: 700px;
+                top: -350px;
+            }
+            80%{
+                box-shadow: -2px -8px 5px 3px black;
+                background: linear-gradient(160deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 650px;
+                top: -300px;
+            }
+            85%{
+                box-shadow: -4px -6px 5px 3px black;
+                background: linear-gradient(140deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 600px;
+                top: -250px;
+            }
+            90%{
+                box-shadow: -6px -4px 5px 3px black;
+                background: linear-gradient(130deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 550px;
+                top: -200px;
+            }
+            95%{
+                box-shadow: -8px -2px 5px 3px black;
+                background: linear-gradient(110deg,#000000, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 500px;
+                top: -150px;
+            }
+            100%{
+                box-shadow: -10px 0px 5px 3px black;
+                background: linear-gradient(90deg,#00090b, #006579, #00a1c1, #00cffd,#58defd,#b4eefc);
+                left: 450px;
+                top: -100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sol"></div>
+    <div id="planeta"></div>
+</body>
+</html>
